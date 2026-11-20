@@ -6,3 +6,5 @@
 *.fls
 *.fdb_latexmk
 *.pdf
+!releases_ru/*.pdf
+!releases_en/*.pdf

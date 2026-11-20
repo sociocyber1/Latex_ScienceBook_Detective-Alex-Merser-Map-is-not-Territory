@@ -21,13 +21,25 @@ ru/                       русская версия
   fonts/                  Lora и Montserrat (статические начертания)
   cover.jpg, logo.png     обложка и логотип SocioCyberneering Inc.
 en/                       английская версия — перевод пока не сделан
+releases_ru/              готовые PDF русской версии (и last_version)
+releases_en/              готовые PDF английской версии
 tools/                    генератор, из которого собирается .tex
   build.py                сборщик
   src/                    исходные интермедии (markdown) и схемы TikZ (python)
 ```
 
-Готовые PDF лежат не в репозитории, а в
-[релизах](../../releases) — по одному на версию.
+## Скачать готовый PDF
+
+**Последняя версия, постоянная ссылка:**
+
+[`releases_ru/karta-ne-est-territoriya-last_version.pdf`](releases_ru/karta-ne-est-territoriya-last_version.pdf)
+
+```sh
+curl -L -o karta.pdf https://github.com/sociocyber1/Latex_ScienceBook_Detective-Alex-Merser-Map-is-not-Territory/raw/main/releases_ru/karta-ne-est-territoriya-last_version.pdf
+```
+
+Все версии по номерам — в папке [`releases_ru/`](releases_ru/); английские сборки,
+когда появятся, будут в [`releases_en/`](releases_en/).
 
 ## Как собрать
 

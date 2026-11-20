@@ -142,6 +142,17 @@ def _patch_ending():
     L[a:b] = NEW.split('\n')
 _patch_ending()
 
+def _patch_lastentry():
+    tgt = 'А люди продолжали рисовать его карты.'
+    idx = [i for i, l in enumerate(L) if l.strip() == tgt]
+    if not idx:
+        return
+    i = idx[-1]
+    L.insert(i + 1, '')
+    L.insert(i + 2, '[[PIC:c_lastentry|Последняя запись Мерсера, найденная мисс Уоррен в архиве: вопросы, которые он успел задать, и строка, которую он успел зачеркнуть]]')
+_patch_lastentry()
+N = len(L)   # пересчёт после вставок
+
 # ---- mechanical fixes (typos, name unification, timeline) ----
 FIXLOG = []
 def fix_all(a, b):
