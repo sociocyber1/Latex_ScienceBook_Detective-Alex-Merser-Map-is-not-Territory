@@ -1,3 +1,7 @@
+<p align="center">
+<img width="532" height="755" alt="Screenshot 2026-11-21 at 00-23-14 Karta_ne_est_territoriya_v28-2 pdf" src="https://github.com/user-attachments/assets/11a89f31-cdd6-4212-a846-ed5985e35662" />
+</p>
+
 # Карта не есть территория
 
 **Научно-нуарный детектив по мотивам семинаров Альфреда Коржибски по общей семантике
