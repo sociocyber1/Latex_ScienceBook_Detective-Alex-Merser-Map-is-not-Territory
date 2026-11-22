@@ -765,6 +765,7 @@ import figs_mid, figs_w3, figs_sem
 FIGS.update(figs_mid.FIGS); DOCS.update(figs_mid.DOCS)
 FIGS.update(figs_w3.FIGS); DOCS.update(figs_w3.DOCS)
 FIGS.update(figs_sem.FIGS); DOCS.update(figs_sem.DOCS)
+FINAL_CH = load_interludes('/home/claude/final_chapter.md')
 INTERLUDES = load_interludes('/home/claude/interludes.md') + load_interludes('/home/claude/mid_interludes.md') + load_interludes('/home/claude/w3_interludes.md') + load_interludes('/home/claude/sem_interludes.md')
 for _it in INTERLUDES:
     for _a, _b in [('Джека', 'Алекса'), ('Джеку', 'Алексу'), ('Джеком', 'Алексом'), ('Джеке', 'Алексе'), ('Джек', 'Алекс')]:
@@ -1157,7 +1158,7 @@ FRONTISPIECE = r"""\clearpage\thispagestyle{empty}
 
 main_tex = (PRE + titlepage(esc(TITLE), SUBTITLE, esc(NOTE)).replace('\\frontmatter\n', '', 1).replace('\\begin{document}\n', '\\begin{document}\n\\frontmatter\n' + COVER, 1) +
             FRONTISPIECE + LICPAGE + MANIFESTO + '\\tableofcontents\n' + PREFACE + '\\mainmatter\n' + '\n'.join(body) +
-            '\n\\backmatter\n' + THANKS + hist_note() + '\n\\end{document}\n')
+            '\n' + _PICRE.sub(_picsub, emit_interlude(FINAL_CH[0], 0)) + '\n\\backmatter\n' + THANKS + hist_note() + '\n\\end{document}\n')
 open(os.path.join(OUT, 'Karta_ne_est_territoriya_v28.tex'), 'w', encoding='utf-8').write(main_tex)
 
 # ---------------------------------------------------------------- superseded drafts file
