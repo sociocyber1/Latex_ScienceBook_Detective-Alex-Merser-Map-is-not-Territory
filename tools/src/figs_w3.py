@@ -455,3 +455,27 @@ FIGS['fission'] = (r"""\begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize,
 \node[draw,line width=0.4pt,dash pattern=on 2.4pt off 1.8pt,fill=black!3,text width=104mm,align=center,font=\scriptsize,inner sep=4pt] at (5.6,-0.9)
  {Осколки вместе весят чуть меньше исходного ядра. Разница не пропадает: она и есть выделившаяся энергия. Если нейтроны находят новые ядра быстрее, чем разлетаются в стороны, --- процесс идёт сам и нарастает. Придержать его --- реактор. Не придерживать --- бомба.};
 \end{tikzpicture}""", 'Цепная реакция: одно деление даёт два осколка и новые нейтроны, каждый из которых находит следующее ядро')
+
+FIGS['bridge'] = (r"""\begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize,
+ bx/.style={draw,line width=0.5pt,align=center,inner sep=3.5pt,text width=30mm,rounded corners=1pt},
+ obs/.style={draw,line width=0.4pt,align=center,inner sep=3pt,text width=27mm,fill=black!6,rounded corners=1pt},
+ cnc/.style={draw,line width=0.4pt,align=center,inner sep=3pt,text width=27mm,dash pattern=on 2.4pt off 1.8pt,rounded corners=1pt}]
+\node[bx,fill=black!8] (a) at (0,4.6) {\textbf{Первый}};
+\node[bx,fill=black!8] (b) at (10.4,4.6) {\textbf{Второй}};
+\node[obs] (o1) at (0,3.0) {\textit{наблюдение:}\\работа по сайту не сделана к сроку};
+\node[cnc] (c1) at (0,1.2) {\textit{вывод о мотиве:}\\«обманывает»};
+\node[obs] (o2) at (10.4,3.0) {\textit{наблюдение:}\\дела офлайн, здоровье};
+\node[cnc] (c2) at (10.4,1.2) {\textit{вывод о мотиве:}\\«не доверяет без причины»};
+\draw[arr] (o1)--(c1); \draw[arr] (o2)--(c2);
+\node[font=\tiny,text width=24mm,align=center] at (2.6,2.1) {пропущено три ступени: не сделал $\ne$ не хотел $\ne$ обманывает};
+\node[font=\tiny,text width=24mm,align=center] at (7.8,2.1) {пропущено столько же, только в другую сторону};
+% мост
+\draw[line width=0.5pt] (1.9,-0.6) -- (3.3,-0.6);
+\draw[line width=0.5pt] (7.1,-0.6) -- (8.5,-0.6);
+\draw[line width=0.5pt,dash pattern=on 1.6pt off 2.4pt,black!55] (3.3,-0.6) -- (7.1,-0.6);
+\draw[arr] (c1) |- (1.9,-0.6);
+\draw[arr] (c2) |- (8.5,-0.6);
+\node[font=\scriptsize,text width=36mm,align=center] at (5.2,-1.35) {\textbf{проверка делом}\\(«что я должен увидеть, чтобы признать, что ошибся?»)\\--- не состоялась};
+\node[font=\scriptsize\itshape,text width=104mm,align=center] at (5.2,-2.8)
+ {Каждый проверял свою карту по своей же карте. Единственный пролёт, который соединил бы их с территорией, никто не достроил --- и мост рухнул не от злого умысла, а от того, что его не было.};
+\end{tikzpicture}""", 'Мост, который не построили: два наблюдения, два вывода о мотиве и один недостающий пролёт')
