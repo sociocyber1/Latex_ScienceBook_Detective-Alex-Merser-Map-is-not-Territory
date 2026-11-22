@@ -33,15 +33,10 @@
 \usepackage{graphicx}
 \newcommand{\pageimg}[2]{\clearpage\thispagestyle{plain}%
 \begin{center}\vspace*{\fill}%
-\makebox[\linewidth][c]{\includegraphics[width=1.16\linewidth,height=0.86\textheight,keepaspectratio]{#1}}\par
+\makebox[\linewidth][c]{\includegraphics[width=1.18\linewidth,height=0.88\textheight,keepaspectratio]{#1}}\par
 \vspace{3mm}{\footnotesize\itshape #2\par}%
 \vspace*{\fill}\end{center}\clearpage}
-\newcommand{\pageimgrot}[2]{\clearpage\thispagestyle{empty}%
-\begin{center}\vspace*{\fill}%
-\rotatebox{90}{\begin{minipage}{0.90\textheight}\centering
-\includegraphics[width=\linewidth,height=1.14\textwidth,keepaspectratio]{#1}\par
-\vspace{2.5mm}{\footnotesize\itshape #2\par}\end{minipage}}%
-\vspace*{\fill}\end{center}\clearpage}
+\newcommand{\pageimgrot}[2]{\pageimg{#1}{#2}}
 \newcommand{\inlineimg}[3]{\begin{center}%
 \includegraphics[width=#2\linewidth]{#1}\par
 \vspace{2mm}{\footnotesize\itshape #3\par}\end{center}}
