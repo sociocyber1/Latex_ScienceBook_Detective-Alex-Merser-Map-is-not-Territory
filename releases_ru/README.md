@@ -2,8 +2,8 @@
 
 | Файл | Версия | Страниц |
 |---|---|---|
-| [`karta-ne-est-territoriya-last_version.pdf`](karta-ne-est-territoriya-last_version.pdf) | **последняя (v28)** | 1225 |
-| [`karta-ne-est-territoriya-v28.pdf`](karta-ne-est-territoriya-v28.pdf) | v28 | 1225 |
+| [`karta-ne-est-territoriya-last_version.pdf`](karta-ne-est-territoriya-last_version.pdf) | **последняя (v28)** | 1231 |
+| [`karta-ne-est-territoriya-v28.pdf`](karta-ne-est-territoriya-v28.pdf) | v28 | 1231 |
 | [`karta-ne-est-territoriya-v27.pdf`](karta-ne-est-territoriya-v27.pdf) | v27 | 1162 |
 
 **Постоянная ссылка на последнюю версию** — она не меняется от выпуска к выпуску:

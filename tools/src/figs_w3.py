@@ -479,3 +479,22 @@ FIGS['bridge'] = (r"""\begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize,
 \node[font=\scriptsize\itshape,text width=104mm,align=center] at (5.2,-2.8)
  {Каждый проверял свою карту по своей же карте. Единственный пролёт, который соединил бы их с территорией, никто не достроил --- и мост рухнул не от злого умысла, а от того, что его не было.};
 \end{tikzpicture}""", 'Мост, который не построили: два наблюдения, два вывода о мотиве и один недостающий пролёт')
+
+FIGS['label'] = (r"""\begin{tikzpicture}[x=1cm,y=1cm,font=\scriptsize,
+ st/.style={draw,line width=0.5pt,align=center,inner sep=3.5pt,text width=23mm,rounded corners=1pt},
+ note/.style={font=\tiny,align=center,text width=25mm,black!65}]
+\node[st,fill=black!8] (a) at (0,0) {\textbf{Событие}\\много людей, много разного};
+\node[st] (b) at (3.4,0) {\textbf{Отбор}\\показывают не всё, а часть};
+\node[st] (c) at (6.8,0) {\textbf{Обобщение}\\часть выдаётся за целое};
+\node[st] (d) at (10.2,0) {\textbf{Имя}\\целое сворачивается в слово};
+\node[st,fill=black!8] (e) at (13.6,0) {\textbf{Намерение}\\слову приписывается «хотят»};
+\draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d); \draw[arr] (d)--(e);
+\node[note] at (3.4,-1.5) {отбор никто не видит: показанное выглядит как всё, что было};
+\node[note] at (6.8,-1.5) {индекс исчезает: человек-1 и человек-2 становятся одним};
+\node[note] at (10.2,-1.5) {дата исчезает: «всегда такие»};
+\node[note] at (13.6,-1.5) {проверке не поддаётся: намерение нельзя увидеть};
+\draw[arr,dash pattern=on 2pt off 2pt,black!55] (e.north) to[bend right=24]
+  node[midway,above,font=\tiny,align=center,text width=52mm]{обратный ход --- вернуться к событию и посмотреть самому --- есть всегда, но он долгий, скучный и никем не оплачен} (a.north);
+\node[font=\scriptsize\itshape,text width=108mm,align=center] at (6.8,-3.0)
+ {Линия работает в одну сторону и очень быстро. Обратный ход существует, но его надо делать руками и в одиночку. Поэтому бирка почти всегда приходит раньше, чем наблюдение.};
+\end{tikzpicture}""", 'Как изготавливается «они»: пять шагов от события до непроверяемого намерения')
