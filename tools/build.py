@@ -1153,7 +1153,7 @@ FRONTISPIECE = r"""\clearpage\thispagestyle{empty}
 
 main_tex = (PRE + titlepage(esc(TITLE), SUBTITLE, esc(NOTE)).replace('\\frontmatter\n', '', 1).replace('\\begin{document}\n', '\\begin{document}\n\\frontmatter\n' + COVER, 1) +
             FRONTISPIECE + LICPAGE + MANIFESTO + '\\tableofcontents\n' + PREFACE + '\\mainmatter\n' + '\n'.join(body) +
-            '\n' + _PICRE.sub(_picsub, emit_interlude(FINAL_CH[0], 0)) + '\n\\backmatter\n' + THANKS + hist_note() + '\n\\end{document}\n')
+            '\n' + ''.join(_PICRE.sub(_picsub, emit_interlude(_x, 0)) for _x in FINAL_CH) + '\n\\backmatter\n' + THANKS + hist_note() + '\n\\end{document}\n')
 open(os.path.join(OUT, 'Karta_ne_est_territoriya_v28.tex'), 'w', encoding='utf-8').write(main_tex)
 
 # ---------------------------------------------------------------- superseded drafts file
